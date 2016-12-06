@@ -10,19 +10,20 @@ HISTFILE=~/.zsh_history
 HISTSIZE=1000000
 SAVEHIST=1000000
 
-
-# Ruby
-export PATH=$HOME/.rbenv/bin:$PATH
 eval "$(rbenv init -)"
 
 # Path
 export PATH=/usr/local/bin:$PATH
 setopt nonomatch
 
+# Ruby
+export PATH=$HOME/.rbenv/bin:$PATH
+
 # Git
 export PATH=/usr/local/Cellar/git/2.5.0/bin:$PATH
 
-
+#go
+export GOPATH=$HOME/.go
 
 # Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
 export COCOS_CONSOLE_ROOT=/Users/axis/Documents/Library/cocos2d-x-3.10/tools/cocos2d-console/bin
@@ -157,3 +158,7 @@ alias tl='tmux ls'
 alias ta='tmux a -t'
 alias tr='tmux rename'
 alias tk='tmux kill-session '
+
+
+alias sl='sails lift'
+alias sg='sails generate'
