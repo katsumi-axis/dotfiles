@@ -151,7 +151,7 @@ alias gp='git push origin B'
 alias gpom='git push origin master'
 alias gphm='git push heroku master'
 alias glom='git pull origin master'
-alias gpe='git commit --allow-empty -m "make pull request"'
+alias gce='git commit --allow-empty -m "make pull request"'
 
 alias t='tmux'
 alias tl='tmux ls'
