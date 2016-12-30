@@ -23,7 +23,11 @@ export PATH=$HOME/.rbenv/bin:$PATH
 export PATH=/usr/local/Cellar/git/2.5.0/bin:$PATH
 
 #go
-export GOPATH=$HOME/.go
+export GOPATH=$HOME/golang
+export PATH=$HOME/golang/bin:$PATH
+
+#python
+export PYTHONPATH=/usr/local/lib/python3.5/site-packages
 
 # Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
 export COCOS_CONSOLE_ROOT=/Users/axis/Documents/Library/cocos2d-x-3.10/tools/cocos2d-console/bin
@@ -160,5 +164,14 @@ alias tr='tmux rename'
 alias tk='tmux kill-session '
 
 
-alias sl='sails lift'
-alias sg='sails generate'
+alias p3='python3'
+alias p3rs='python3 manage.py runserver'
+alias p3mm='python3 manage.py makemigrations'
+alias p3m='python3 manage.py migrate'
+
+alias mweb='cd /Users/axis/Documents/web'
+alias mgame='cd /Users/axis/Documents/game'
+alias mapp='cd /Users/axis/Documents/app'
+
+alias cpd='bundle exec cap production deploy'
+alias cpr='bundle exec cap production unicon:restart'
