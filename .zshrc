@@ -174,9 +174,9 @@ alias p3rs='python3 manage.py runserver'
 alias p3mm='python3 manage.py makemigrations'
 alias p3m='python3 manage.py migrate'
 
-alias mweb='cd /Users/axis/Documents/web'
-alias mgame='cd /Users/axis/Documents/game'
-alias mapp='cd /Users/axis/Documents/app'
+alias mw='cd /Users/axis/Documents/web'
+alias mg='cd /Users/axis/Documents/game'
+alias ma='cd /Users/axis/Documents/app'
 
 alias cpd='bundle exec cap production deploy'
 alias cpr='bundle exec cap production unicon:restart'
