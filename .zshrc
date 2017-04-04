@@ -27,7 +27,9 @@ export GOPATH=$HOME/golang
 export PATH=$HOME/golang/bin:$PATH
 
 #python
-export PYTHONPATH=/usr/local/lib/python3.5/site-packages
+export PYENV_ROOT=$HOME/.pyenv
+export PATH=$PYENV_ROOT/bin:$PATH
+eval "$(pyenv init -)"
 
 # Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
 export COCOS_CONSOLE_ROOT=/Users/axis/Documents/Library/cocos2d-x-3.10/tools/cocos2d-console/bin
@@ -40,6 +42,9 @@ export PATH=$COCOS_X_ROOT:$PATH
 # Add environment variable COCOS_TEMPLATES_ROOT for cocos2d-x
 export COCOS_TEMPLATES_ROOT=/Users/axis/Documents/Library/cocos2d-x-3.10/templates
 export PATH=$COCOS_TEMPLATES_ROOT:$PATH
+
+#postgresql
+export PGDATA=/usr/local/var/postgres
 
 autoload -U compinit
 compinit -u
