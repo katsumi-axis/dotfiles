@@ -10,7 +10,6 @@ HISTFILE=~/.zsh_history
 HISTSIZE=1000000
 SAVEHIST=1000000
 
-eval "$(rbenv init -)"
 
 # Path
 export PATH=/usr/local/bin:$PATH
@@ -29,7 +28,6 @@ export PATH=$HOME/golang/bin:$PATH
 #python
 export PYENV_ROOT=$HOME/.pyenv
 export PATH=$PYENV_ROOT/bin:$PATH
-eval "$(pyenv init -)"
 
 # Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
 export COCOS_CONSOLE_ROOT=/Users/axis/Documents/Library/cocos2d-x-3.10/tools/cocos2d-console/bin
@@ -57,6 +55,8 @@ RPROMPT="%{${reset_color}%}"
 
 autoload -Uz vcs_info
 setopt prompt_subst
+setopt histignorealldups
+setopt correct
 zstyle ':vcs_info:git:*' check-for-changes true
 zstyle ':vcs_info:git:*' stagedstr "%F{yellow}!"
 zstyle ':vcs_info:git:*' unstagedstr "%F{red}+"
@@ -64,8 +64,10 @@ zstyle ':vcs_info:*' formats "%F{green}%c%u[%b]%f"
 zstyle ':vcs_info:*' actionformats '[%b|%a]'
 precmd () { vcs_info }
 RPROMPT=$RPROMPT'${vcs_info_msg_0_}'
-PROMPT="%{${fg[green]}%}[axis]▶%{${reset_color}%} "
+PROMPT="%{${fg[green]}%}%* %c ]%{${reset_color}%} "
 
+
+chpwd() { ls -GF }
 
 alias ls="ls -GF"
 alias gls="gls --color"
@@ -75,7 +77,7 @@ alias la='ls -la'
 bindkey -v
 
 # Editer
-export EDITOR=/usr/local/bin/vim
+#export EDITOR=/usr/local/bin/vim
 
 
 ####### option
@@ -166,7 +168,7 @@ alias t='tmux'
 alias tl='tmux ls'
 alias ta='tmux a -t'
 alias tr='tmux rename'
-alias tk='tmux kill-session '
+alias tk='tmux kill-session'
 
 
 alias p3='python3'
@@ -174,9 +176,38 @@ alias p3rs='python3 manage.py runserver'
 alias p3mm='python3 manage.py makemigrations'
 alias p3m='python3 manage.py migrate'
 
-alias mw='cd /Users/axis/Documents/web'
-alias mg='cd /Users/axis/Documents/game'
-alias ma='cd /Users/axis/Documents/app'
+alias cdd='cd /Users/axis06/Desktop'
+
+alias am='atom .'
 
 alias cpd='bundle exec cap production deploy'
-alias cpr='bundle exec cap production unicon:restart'
+alias cpus='bundle exec cap production unicorn:stop'
+
+alias csd='bundle exec cap staging deploy'
+alias csus='bundle exec cap staging unicorn:stop'
+
+alias fig='docker-compose'
+alias do='docker'
+alias ds='docker-sync start'
+
+eval "$(pyenv init -)"
+eval "$(rbenv init -)"
+
+
+export PATH="/usr/local/opt/sqlite/bin:$PATH"
+
+# Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
+export COCOS_CONSOLE_ROOT="/Users/axis06/Documents/Gupero/cocos2d-x-3.17.1/tools/cocos2d-console/bin"
+export PATH=$COCOS_CONSOLE_ROOT:$PATH
+
+# Add environment variable COCOS_X_ROOT for cocos2d-x
+export COCOS_X_ROOT="/Users/axis06/Documents/Gupero"
+export PATH=$COCOS_X_ROOT:$PATH
+
+# Add environment variable COCOS_TEMPLATES_ROOT for cocos2d-x
+export COCOS_TEMPLATES_ROOT="/Users/axis06/Documents/Gupero/cocos2d-x-3.17.1/templates"
+export PATH=$COCOS_TEMPLATES_ROOT:$PATH
+
+# Add environment variable SDKBOX_HOME for sdkbox installer
+export SDKBOX_HOME=/Users/axis06/.sdkbox
+export PATH=${SDKBOX_HOME}/bin:$PATH
