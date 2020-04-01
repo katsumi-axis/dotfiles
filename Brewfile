@@ -27,6 +27,7 @@ cask postman
 cask slack
 cask google-chrome
 cask oogle-japanese-ime
+cask iterm2
 
 # App Store applications
 appstore 803453959 Slack (4.4.1)
