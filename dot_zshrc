@@ -49,11 +49,7 @@ alias la='ls -la'
 # Vi like
 bindkey -v
 
-# Editer
-#export EDITOR=/usr/local/bin/vim
-
-
-####### option
+# ####### option
 setopt auto_cd
 setopt auto_menu
 setopt auto_param_keys
@@ -132,22 +128,10 @@ alias gcam='git commit --amend'
 alias gl='git pull origin B'
 alias gp='git push origin B'
 alias gpom='git push origin master'
-alias gphm='git push heroku master'
 alias glom='git pull origin master'
 alias gce='git commit --allow-empty -m "make pull request"'
 
-alias t='tmux'
-alias tl='tmux ls'
-alias ta='tmux a -t'
-alias tr='tmux rename'
-alias tk='tmux kill-session'
-
-
-alias p3='python3'
-alias am='atom .'
 
 alias fig='docker-compose'
-alias do='docker'
-alias ds='docker-sync start'
 
 eval "$(anyenv init -)"
