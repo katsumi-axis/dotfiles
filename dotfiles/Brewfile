@@ -1,29 +1,24 @@
-
-# Other Homebrew packages
-brew anyenv
-brew git
-brew mas
-brew ncurses
-brew node
-brew pcre
-brew pcre2
-brew postgresql
-brew yarn
-brew zsh
-brew chezmoi
-
-# Other Cask applications
-cask arduino
-cask clipy
-cask cyberduck
-cask docker
-cask font-hackgen
-cask karabiner-elements
-cask mendeley-desktop
-cask notion
-cask onyx
-cask postman
-cask slack
-cask google-chrome
-cask oogle-japanese-ime
-cask iterm2
+tap "homebrew/bundle"
+brew "anyenv"
+brew "chezmoichezmoi"
+brew "git"
+brew "gnupg"
+brew "mas"
+brew "node"
+brew "pinentry-mac"
+brew "yarn"
+brew "zsh"
+cask "docker"
+cask "karabiner-elements"
+cask "notion"
+cask "raycast"
+cask "visual-studio-code"
+cask "warp"
+cask "xcodes"
+mas "Focus To-Do", id: 1258530160
+mas "Keynote", id: 409183694
+mas "Magnet", id: 441258766
+mas "MeetingBar", id: 1532419400
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Slack", id: 803453959
