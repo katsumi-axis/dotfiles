@@ -14,7 +14,6 @@ SAVEHIST=1000000
 # Path
 export PATH=/usr/local/bin:$PATH
 export PATH=~/Development/flutter/bin:$PATH
-export AWS_SDK_LOAD_CONFIG=1
 setopt nonomatch
 
 autoload -U compinit
@@ -82,27 +81,7 @@ alias push='git push'
 alias st='git status'
 alias stt='git status -uno'
 alias g='git'
-alias r='rails'
-alias rs='rails s'
 alias git log='git log --graph --all --format="%x09%an%x09%h %d %s"'
-
-alias be='bundle exec'
-alias rake='bundle exec rake'
-alias rspec='bundle exec rspec'
-alias be='bundle exec'
-alias bi='bundle install --path vendor/bundle --jobs=4'
-alias rdc='rake db:create'
-alias rdm='rake db:migrate'
-alias rdmt='rake db:migrate RAILS_ENV=test'
-alias rdd='rake db:drop'
-alias rds='rake db:seed'
-alias rdr='rake db:reset'
-alias rdmr='rake db:migrate:reset'
-alias rr='spring rake routes'
-alias rs='rails s'
-alias rs4='rails s -p 4000'
-alias rs5='rails s -p 5000'
-alias rc='rails c'
 
 alias gi='git init'
 alias gd='git diff'
@@ -130,8 +109,17 @@ alias gp='git push origin B'
 alias gpom='git push origin master'
 alias glom='git pull origin master'
 alias gce='git commit --allow-empty -m "make pull request"'
+alias gcl="!f () { git checkout $1; git branch --merged|egrep -v '\\*|develop|main'|xargs git branch -d; };f"
 
 
 alias fig='docker-compose'
 
 eval "$(anyenv init -)"
+
+# pnpm
+export PNPM_HOME="~/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

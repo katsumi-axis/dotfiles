@@ -3,5 +3,4 @@
 
 ```
 brew install chezmoi 
-chezmoi init --apply https://github.com/katsumi-axis/dotfiles/
 ```

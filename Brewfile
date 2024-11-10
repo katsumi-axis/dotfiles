@@ -20,7 +20,8 @@ cask "xcodes"
 mas "Focus To-Do", id: 1258530160
 mas "Keynote", id: 409183694
 mas "Magnet", id: 441258766
-mas "MeetingBar", id: 1532419400
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Slack", id: 803453959
+mas "Bitwarden", id: 1352778147
+mas "DevCleaner", id: 1388020431
