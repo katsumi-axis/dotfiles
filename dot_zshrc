@@ -13,7 +13,7 @@ SAVEHIST=1000000
 
 # Path
 export PATH=/usr/local/bin:$PATH
-export PATH=~/Development/flutter/bin:$PATH
+export PATH=/opt/homebrew/bin:$PATH
 setopt nonomatch
 
 autoload -U compinit
