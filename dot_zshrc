@@ -114,6 +114,7 @@ alias gcl="!f () { git checkout $1; git branch --merged|egrep -v '\\*|develop|ma
 
 alias fig='docker-compose'
 
+eval "$(/opt/homebrew/bin/brew shellenv)"
 eval "$(anyenv init -)"
 
 # pnpm
