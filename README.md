@@ -14,3 +14,10 @@ chezmoi apply
 ```
 brew bundle --file '~/.Brewfile'  
 ```
+
+## defaults write
+```
+defaults write -g com.apple.mouse.scaling 8
+defaults write com.apple.finder CreateDesktop -bool false
+killall Finder
+```
