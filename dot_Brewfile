@@ -2,30 +2,33 @@ brew "anyenv"
 brew "biome"
 brew "chezmoi"
 brew "cloudflared", restart_service: :changed
-brew "openjdk"
 brew "gh"
-brew "git-lfs"
 brew "git"
+brew "git-lfs"
 brew "gnupg"
 brew "mas"
 brew "node"
+brew "openjdk"
 brew "pinentry-mac"
 brew "pnpm"
 brew "uv"
 brew "wget"
 brew "zsh"
 cask "android-studio"
+cask "bitwarden"
 cask "chatgpt"
 cask "claude"
+cask "cursor"
 cask "docker-desktop"
-cask "docker"
+cask "ghostty"
 cask "iterm2"
 cask "karabiner-elements"
 cask "notion"
 cask "obsidian"
+cask "raycast"
 cask "unity-hub"
 cask "visual-studio-code"
-cask "xcodes"
+cask "xcodes-app"
 mas "DevCleaner", id: 1388020431
 mas "Keynote", id: 409183694
 mas "Kindle", id: 302584613
@@ -33,4 +36,3 @@ mas "Magnet", id: 441258766
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Slack", id: 803453959
-tap "homebrew/bundle"
