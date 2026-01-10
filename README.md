@@ -4,12 +4,13 @@
 
 ## chezmoi
 ```
-brew install chezmoi 
+brew install chezmoi
+chezmoi init git@github.com:katsumi-axis/dotfiles.git
 chezmoi apply
 ```
 
 
 ## Brew
 ```
-brew bundle   
+brew bundle --file '~/.Brewfile'  
 ```
