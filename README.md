@@ -18,6 +18,7 @@ brew bundle --file '~/.Brewfile'
 ## defaults write
 ```
 defaults write -g com.apple.mouse.scaling 8
+defaults write -g InitialKeyRepeat -int 10
 defaults write com.apple.finder CreateDesktop -bool false
 killall Finder
 ```
